@@ -1,0 +1,11 @@
+In docker we add new network and connect our container to that network
+# docker container ls       list out the running container 
+# docker network ls         list out the network on host system
+#docker network create --driver=bridge mynetwork               create new network
+#docker network rm mynetwork         remove the network 
+#docker container run -d -p 80:80 --name mycontainer httpd --network mynetwork
+#docker container exec -it mycontainer bash  this will useful to connect our container
+#docker container rm mycontainer          for remove the container 
+#docker images             list out the local image store inside the host system
+#docker image rm image_name                         
+
