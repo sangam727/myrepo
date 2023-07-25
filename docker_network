@@ -9,3 +9,6 @@ In docker we add new network and connect our container to that network
 #docker images             list out the local image store inside the host system
 #docker image rm image_name                         
 
+File location inside container 
+for nginx index.html is located inside /usr/share/nginx/html/
+for apache index.html is located inside /usr/local/apache2/htdocs/
