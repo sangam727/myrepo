@@ -1,0 +1,27 @@
+Compelete concept of docker images
+Build docker images
+Deploy Docker images
+docker images management
+docker hub central repository
+manage local images
+
+what is docker images?
+an image is a combination of a file system and parameters. Images contains the binaries ans dependencies.
+Images container the data require to run the image.
+for list out docker images
+#docker images     command is used
+
+
+docker images can be downloaded from docker hub.
+Base images that have no parent image, usually images with an OS like Ubuntu,busybox or debian.
+child images that build on base images and add additional fuctionality.
+official images that are officially maintained and supported by docker.
+user images that are created and shared by users like us. they build on base images and add additional functionality.
+typically, these are formatted as user/image-name.
+
+
+how to download images from repository to local host machine
+#docker pull images name : image version
+
+how to upload local image into docker repo
+#docker image push image_name:tag
