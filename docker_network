@@ -12,3 +12,8 @@ In docker we add new network and connect our container to that network
 File location inside container 
 for nginx index.html is located inside /usr/share/nginx/html/
 for apache index.html is located inside /usr/local/apache2/htdocs/
+
+DOCKER DNS
+DNS stand for Domain name system.
+in docker docker engine used dns to communicate with container they not use ip for communication.
+ 

@@ -1,0 +1,29 @@
+Docker can build images automatically by reading the instructions from Dockerfile.
+A Dockerfile is text document that contains all the commands a user could call on the command line to assemble an image.
+command to build image from Dockerfile
+# docker build -f <path_of _docker_file>
+
+Docker file instructions 
+FROM : the FORM instruction initializes a new build stage and sets the base image from subsequent instructions.
+A valid Dockerfile must start with a FROM instruction.
+Base image can be any valid image.
+Format:
+FROM <image>[:<tags>]
+LABEL : LABEL added to image to organize images by project, record licensing information.
+RUN : RUN instruction will execute any commands in a new layer on top of the current image and commit the results.
+e.g 
+FROM ubuntu:14.04
+RUN apt-get update 
+RUN apt-get install curl -y
+CMD : CMD instruction should be used to run the software contained by your image,along with any arguments.
+e.g CMD ["executable","param1","param2"]
+There can only be one CMD instruction in a Dockerfile. If you list more than one CMD then only the last CMD will take effect.
+The main purpose of a CMD is to provide defaults for an executing container.
+EXPOSE : EXPOSE instruction indicates the ports on which a container listens for connections.
+e.g EXPOSE <port>
+ENV : ENV instruction sets the environment variable <Key> to the value <value>.
+To make new software easier to run, you can use ENV to update the PATH environment variable for the spftware your container installs.
+ADD : ADD instruction copies new files,directories or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
+ADD hom* /mydir/ # adds all files starting with "hom"
+VOLUME : VOLUME instruction should be used to expose any database storage area, configuration storage, or file/ folders created by your docker container.
+WORKDIR : WORKDIR instuction sets the working directory from any RUN, CMD,ADD instructions that follow it in the Dockerfile.
